@@ -41,7 +41,7 @@ prediction_model = pickle.load(open('classifier.sav','rb'))
 
 @app.get('/')
 def welcome():
-    return "hey welcome to this page"
+    return "Hey welcome to this page. To view the model deployed yu ca visit the endpoint /predict/docs to check it."
 
 @app.post('/predict')
 def credit_prediction(input_parameters: CreditRating):
