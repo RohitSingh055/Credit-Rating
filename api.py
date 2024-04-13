@@ -6,12 +6,15 @@ import json
 
 
 app = FastAPI()
+
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:3002"],  # Adjust this to your frontend URL
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["POST"],
-    allow_headers=["Content-Type"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 class CreditRating(BaseModel):
