@@ -37,7 +37,7 @@ class CreditRating(BaseModel):
 
 
 # loading model 
-prediction_model = pickle.load(open('model.sav','rb'))
+prediction_model = pickle.load(open('classifier.pkl','rb'))
 
 @app.get('/')
 def welcome():
