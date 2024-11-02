@@ -51,6 +51,6 @@ def credit_prediction(input_parameters: CreditRating):
     prediction = prediction_model.predict([input_list])
 
     if prediction[0] == 0:
-        return "The credit card rating is bad."
+        return "The customer will exit from the bank."
     else:
-        return "The credit card rating is good."
+        return "The customer will not exit from the bank."
